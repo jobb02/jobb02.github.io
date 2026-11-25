@@ -38,7 +38,7 @@ li { margin-top: 1.4pt; }
 <h2 style="margin-top:15pt">PROFIL</h2>
 <p class="prof">Ingénieur cybersécurité spécialisé en gestion des vulnérabilités, sécurité réseau et administration systèmes. Deux années chez TV5MONDE sur un parc d'environ 140 actifs : pilotage Tenable, priorisation VPR, remédiation, reporting RSSI et migration Cisco ASA vers Palo Alto/Panorama. Maîtrise également Cortex XDR, Defender, YesWeHack, SIEM, Active Directory et environnements Windows/Linux. Homelab personnel documenté sur GitHub : trois sites, trois pare-feux (OPNsense, FortiGate, Sophos) reliés par VPN IPsec, virtualisation Proxmox, DNS, NAS et sauvegardes.</p>
 
-<h2>EXPÉRIENCE PROFESSIONNELLE</h2>
+<h2>EXPÉRIENCE</h2>
 <div class="row"><div class="when">oct. 2024 – oct. 2026</div><div class="what"><b class="h">Ingénieur Cybersécurité, TV5MONDE · Paris</b><ul>
 <li>Supervision d'environ 140 actifs Windows/Linux et pilotage de plus de 4 000 vulnérabilités via Tenable, dont près de 9 % critiques ; priorisation selon le VPR et les enjeux métiers.</li>
 <li>Renforcement de la posture de sécurité : couverture agents portée de 12 à 44 actifs en 1 trimestre, 2 100+ vulnérabilités remédiées, suivi des SLA/ancienneté et reporting régulier au RSSI.</li>
@@ -46,6 +46,13 @@ li { margin-top: 1.4pt; }
 <li>Déploiement et administration principale de la plateforme de bug bounty YesWeHack, en coordination avec les équipes numériques.</li>
 <li>Traitement des alertes SIEM/XDR ; POC Tenable/Mantra, formation de la DSI, veille sécurité et rédaction du bulletin CyberInfo.</li>
 <li>Sensibilisation : conception et animation d'ateliers Cybermois (phishing, vol de données, stéganographie) avec démonstrations attaquant/victime.</li></ul></div></div>
+<div class="row"><div class="when">2024 – aujourd'hui</div><div class="what"><b class="h">Homelab cybersécurité multi-sites</b> — projet personnel<ul>
+<li>Infrastructure montée progressivement depuis 2024, avec du matériel acheté ou récupéré : deux hôtes Proxmox VE simulant trois sites (siège et deux agences).</li>
+<li>Trois pare-feux de constructeurs différents (OPNsense, FortiGate, Sophos), segmentation réseau et VPN IPsec IKEv2 site à site ; accès distant via WireGuard.</li>
+<li>Services d'infrastructure : DNS faisant autorité et résolveur filtrant, NAS Synology en RAID 1 avec sauvegardes versionnées et tests de restauration.</li>
+<li>Déploiement d'une application web multi-utilisateurs en conteneur Ubuntu : service systemd, écoute locale uniquement, durcissement du serveur et accès HTTPS restreint via Tailscale.</li>
+<li>Tenant Microsoft 365 / Entra ID de test : gestion des utilisateurs et des groupes, MFA (en cours).</li>
+<li>Chaque étape documentée sur GitHub (github.com/jobb02/homelab).</li></ul></div></div>
 <div class="row"><div class="when">sept. 2023 – sept. 2024</div><div class="what"><b class="h">Administrateur Systèmes, Réseaux &amp; Infrastructures, Crouzet / STPI · Paris</b><ul>
 <li>Administration de deux domaines Active Directory et support N3 ; incidents GLPI réduits d'environ 10 %/mois sur 1 an.</li>
 <li>Refonte du LAN : diagnostic de l'existant, cahier des charges, coordination du prestataire fibre, configuration et mise en service ; supervision Meraki.</li>
@@ -55,16 +62,7 @@ li { margin-top: 1.4pt; }
 <li>Déploiement et sécurisation d'un serveur d'impression Linux SSH/LDAP (droits, ports, authentification).</li>
 <li>Maintenance préventive et curative : mises à jour, contrôle des logs, correction LDAP ; documentation et suivi des actifs dans VCSA.</li></ul></div></div>
 
-<h2>PROJETS &amp; HOMELAB</h2>
-<div class="row" style="break-inside:auto"><div class="when">En continu</div><div class="what"><b class="h">Homelab personnel</b> — infrastructure auto-hébergée<ul>
-<li>Virtualisation : deux hôtes Proxmox VE simulant trois sites (siège et deux agences), VM Kali Linux et Debian, conteneurs LXC.</li>
-<li>Sécurité réseau : lab de test isolé derrière un pare-feu OPNsense virtualisé (réseau dédié, filtrage et journalisation des flux, accès au réseau domestique bloqué).</li>
-<li>Multi-constructeurs : FortiGate (FortiOS 7.6) et Sophos Firewall en VM sur les agences ; tunnel VPN IPsec IKEv2 site à site entre OPNsense et Sophos (AES-256, SHA2-256, DH14).</li>
-<li>Réseau : contrôleur TP-Link Omada en LXC pour administrer le switch manageable ; accès distant au lab via le VPN WireGuard de la Freebox.</li>
-<li>DNS : serveur faisant autorité sur la zone home.arpa (zones directe et inverse, enregistrements A, CNAME, PTR) ; AdGuard Home en résolveur filtrant (DNS over HTTPS vers Cloudflare et Quad9, listes anti-phishing et anti-malware, redirection conditionnelle de la zone locale).</li>
-<li>NAS Synology en RAID 1 : sauvegarde versionnée du poste de travail avec test de restauration, migration de plusieurs dizaines de milliers de photos depuis le cloud, maintenance planifiée (tests S.M.A.R.T., vérification de cohérence du RAID, vidage automatique de la corbeille).</li>
-<li>Déploiement d'une application web multi-utilisateurs en conteneur Ubuntu : service systemd, écoute locale uniquement, durcissement du serveur (blocage des fichiers sensibles) et accès HTTPS restreint via Tailscale.</li>
-<li>Tenant Microsoft 365 / Entra ID de test : gestion des utilisateurs et groupes, MFA via les paramètres de sécurité par défaut (en cours).</li></ul></div></div>
+<h2>PROJETS</h2>
 <div class="row"><div class="when">2026</div><div class="what"><b class="h">Projets de fin d'études</b> — SUP DE VINCI<ul>
 <li>Conception d'un SOC externalisé : stratégie de supervision, règles d'alerting, playbooks de réponse, automatisations SOAR avec n8n et TheHive, tableaux de bord de suivi.</li>
 <li>Développement d'une boîte à outils de pentest automatisée ; documentation des scénarios d'attaque et de remédiation.</li></ul></div></div>
